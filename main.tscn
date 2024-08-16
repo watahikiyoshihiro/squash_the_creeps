@@ -77,8 +77,9 @@ curve = SubResource("Curve3D_e0wlw")
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
 transform = Transform3D(-0.00232903, 0.00714581, -0.999972, 0, 0.999974, 0.00714583, 0.999997, 1.66429e-05, -0.00232897, -13.0529, 3.98633, -16.8526)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_timer_timeout"]
