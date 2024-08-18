@@ -23,6 +23,7 @@ func initialize(start_position, player_position):
 	# so that it doesn't move directly towards the player.
 	rotate_y(randf_range(-PI / 4, PI / 4))
 
+
 # We calculate a random speed (integer)
 	var random_speed = randi_range(min_speed, max_speed)
 	# We calculate a forward velocity that represents the speed.
@@ -30,6 +31,7 @@ func initialize(start_position, player_position):
 	# We then rotate the velocity vector based on the mob's Y rotation
 	# in order to move in the direction the mob is looking.
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
+	$AnimationPlayer.speed_scale = random_speed / min_speed
 
 
 
