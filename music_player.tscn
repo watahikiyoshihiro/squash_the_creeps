@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8ptlu48d08of"]
+
+[ext_resource type="AudioStream" uid="uid://cn6ii5yb3kbuv" path="res://art/20240817.ogg" id="1_i1vaf"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_i1vaf")
+autoplay = true
